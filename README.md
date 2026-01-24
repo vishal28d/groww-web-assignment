@@ -1,73 +1,109 @@
-# Welcome to your Lovable project
+# Groww Web Intern Assignment
 
-## Project info
+A modern frontend project built as part of the **Groww Web Intern Assignment**. This project demonstrates clean architecture, scalable UI patterns, and production-ready tooling using the latest frontend ecosystem.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+---
 
-## How can I edit this code?
+## 🚀 Prerequisites
 
-There are several ways of editing your application.
+Make sure the following are installed on your system:
 
-**Use Lovable**
+* **Node.js** (v18+ recommended)
+* **npm** (comes with Node.js)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+> Recommended: Install Node using **nvm** so you can easily manage versions.
+> [https://github.com/nvm-sh/nvm#installing-and-updating](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## 📦 Project Setup
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Follow these steps to run the project locally:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# Step 1: Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
+# Step 2: Navigate to the project directory
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Step 3: Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Step 4: Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The app will start with hot-reload enabled and can be accessed in the browser at the displayed local URL.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## 🛠️ Tech Stack
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+This project is built using:
 
-## What technologies are used for this project?
+* **Vite** – Fast development build tool
+* **TypeScript** – Type-safe JavaScript
+* **React** – Component-based UI framework
+* **shadcn/ui** – Reusable and accessible UI components
+* **Tailwind CSS** – Utility-first styling framework
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## ✏️ How to Edit the Project
 
-## How can I deploy this project?
+### Option 1: Edit directly on GitHub
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+1. Navigate to the desired file in the repository.
+2. Click the **Edit (✏️)** button.
+3. Make changes.
+4. Commit the changes directly to the branch.
 
-## Can I connect a custom domain to my Lovable project?
+### Option 2: Use GitHub Codespaces
 
-Yes, you can!
+1. Go to the repository home page.
+2. Click the **Code** button.
+3. Open the **Codespaces** tab.
+4. Click **New codespace**.
+5. Edit files directly in the browser-based VS Code environment.
+6. Commit and push your changes.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 🌍 Deployment
+
+The project can be deployed on any modern frontend hosting platform such as:
+
+* Vercel
+* Netlify
+* Cloudflare Pages
+
+### Example (Vercel)
+
+```sh
+npm run build
+```
+
+Upload the generated `dist/` folder or connect the GitHub repository directly to the hosting provider for automatic CI/CD deployment.
+
+---
+
+## 🔗 Custom Domain
+
+Once deployed, you can attach a custom domain directly from your hosting provider dashboard (Vercel / Netlify / Cloudflare) and configure DNS records accordingly.
+
+---
+
+## 📌 Notes
+
+* The project follows modular component structure for maintainability.
+* Tailwind utility classes are used for consistent spacing and responsive layouts.
+* Components from shadcn-ui are customized to match design requirements.
+* Type safety ensures better reliability and developer experience.
+
+---
+
+## 👤 Developer
+
+**Vishal Maurya**
+Web Intern Assignment Submission
