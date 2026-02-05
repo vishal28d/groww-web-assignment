@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fin-board
+  labels:
+    app: fin-board
+spec:
+  # Number of replica pods to run
+  replicas: 2
+  selector:
+    matchLabels:
+      app: fin-board
+  # Rolling update strategy for zero-downtime deployments
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: fin-board
+    spec:
+      containers:
+        - name: fin-board
+          # Docker image from Docker Hub
+          image: vishal28d/fin-board
+          # Always pull the latest image
+          imagePullPolicy: Always
+          ports:
+            # Container listens on port 3500 (nginx)
+            - containerPort: 3500
+              name: http
+              protocol: TCP
+          # Resource limits (adjust based on your needs)
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
+          # Liveness probe to check if container is running
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          # Readiness probe to check if container is ready to receive traffic
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 5
+            periodSeconds: 5
