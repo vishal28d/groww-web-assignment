@@ -21,7 +21,7 @@ export function EmptyState({ onAddWidget }: EmptyStateProps) {
 
       <button
         onClick={onAddWidget}
-        className="flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium transition-all hover:bg-primary/90 btn-primary-glow"
+        className="flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-green-300 to-green-600 text-white font-medium transition-all hover:opacity-90 btn-primary-glow"
       >
         <span className="text-lg leading-none">+</span>
         Add Your First Widget
