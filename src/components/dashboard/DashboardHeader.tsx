@@ -14,7 +14,7 @@ export function DashboardHeader({ widgetCount, onAddWidget }: DashboardHeaderPro
             <BarChart3 className="w-5 h-5 text-primary-foreground" />
           </div>
           <div>
-            <h1 className="text-lg font-semibold text-foreground">Finance Dashboard - Devvine - 5</h1>
+            <h1 className="text-lg font-semibold text-foreground">Finance Dashboard - Devvine - 6</h1>
             <p className="text-xs text-muted-foreground">
               {widgetCount > 0 
                 ? `${widgetCount} active widget${widgetCount > 1 ? 's' : ''} • Real-time data`
