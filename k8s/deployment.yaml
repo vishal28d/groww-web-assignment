@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: groww-app
-        image: vishal28d/groww-app:v1
+        image: vishal28d/fin-board:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
