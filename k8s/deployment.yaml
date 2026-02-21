@@ -1,41 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: groww-app
-  labels:
-    app: groww-app
+  name: fin-board
+  namespace: default
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: groww-app
+      app: fin-board
   template:
     metadata:
       labels:
-        app: groww-app
+        app: fin-board
     spec:
       containers:
-      - name: groww-app
-        image: vishal28d/fin-board:latest
-        imagePullPolicy: Always
-        ports:
-        - containerPort: 80
-        resources:
-          requests:
-            cpu: "100m"
-            memory: "128Mi"
-          limits:
-            cpu: "500m"
-            memory: "256Mi"
-        readinessProbe:
-          httpGet:
-            path: /
-            port: 3000
-          initialDelaySeconds: 10
-          periodSeconds: 10
-        livenessProbe:
-          httpGet:
-            path: /
-            port: 3000
-          initialDelaySeconds: 20
-          periodSeconds: 20
+        - name: fin-board
+          image: vishal28d/fin-board:latest
+          ports:
+            - containerPort: 80
