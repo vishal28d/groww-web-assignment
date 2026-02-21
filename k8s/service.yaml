@@ -1,23 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: fin-board
-  labels:
-    app: fin-board
+  name: groww-service
 spec:
-  # Service type: ClusterIP (internal only), NodePort, or LoadBalancer (external)
-  # - ClusterIP: Only accessible within the cluster (default)
-  # - NodePort: Exposes on each Node's IP at a static port
-  # - LoadBalancer: Provisions an external load balancer (cloud provider dependent)
-  type: ClusterIP
+  type: NodePort
   selector:
-    # Routes traffic to pods with this label
-    app: fin-board
+    app: groww-app
   ports:
-    - name: http
-      # Port on the service (cluster-internal)
-      port: 3500
-      # Port on the target pod
-      targetPort: 3500
-      # Protocol to use
-      protocol: TCP
+  - port: 80
+    targetPort: 3000
+    nodePort: 30007
